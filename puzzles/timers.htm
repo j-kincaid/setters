@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!-- Make an animation that changes a css property of an element using either a timer or requestAnimationFrame. I do think all css properties can be changed in this way.
+
+    The syntax for accessing a css property of an element is:
+    
+    element.style.property
+    If the property uses a hyphen like font-size or background-color, javascript uses camel casing like:
+    element.style.backgroundColor='rgb(127,127,127)'; -->
+
+<head>
+    <title>Animation with Styles</title>
+</head>
+<h3>These scripts display changes in the timer.</h3>
+<p>This one's one interval per 1000 milliseconds</p>
+<div id="msecond">one interval per 1000 milliseconds</div>
+<p>This one's 60 times/second</p>
+<div id="faster">one interval per 16 milliseconds</div>
+
+<body style="padding: 3rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+
+    <script>
+        x = 0;
+        window.setInterval(function() {
+            document.getElementById('msecond').innerHTML = x;
+            x++;
+        }, 1000);
+    </script>
+
+    <script>
+        y = 0;
+        window.setInterval(function() {
+            document.getElementById('faster').innerHTML = y;
+            y++;
+        }, 16);
+    </script>
+</body>
+
+</html>
