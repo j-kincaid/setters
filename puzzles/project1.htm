@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is a multi part challenge. 
+            
+        Make a program that generates a string of 100 random numbers 0-9, then accept user input to count how many times a certain digit appears in the string.
+
+        Bonus 1:
+        Make the program highlight the occurrences in the output.
+        
+        Bonus 2:
+        Make the program capable of searching for more than 1 digit.
+        
+        Bonus 3:
+        Make the program highlight searches for more than 1 digit.
+         -->
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Coding Challenge: 100 random numbers</title>
+    <style>
+        * {
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        button {
+            background-color: rgb(8, 117, 50);
+            padding: 1%;
+            font-size: 1.1em;
+            height: 2.75em;
+            border-radius: 5px;
+        }
+        
+        #pickOne {
+            margin: auto;
+            height: 3em;
+        }
+        
+        .container {
+            position: absolute;
+            margin-top: 5em;
+            float: right;
+        }
+        
+        body {
+            background-color: #000;
+        }
+        
+        #container {
+            margin: auto;
+            padding: 10%;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h2>A Coding Challenge</h2>
+        <p>Make a program that generates a string of 100 random numbers 0-9, then accept user input to count how many times a certain digit appears in the string.</p>
+        <button onclick="gimme100(100)">Show me 100</button>
+        <p id="zero"></p>
+    </div>
+
+    <!-- If I know the maximum number of times I'll need to execute the body, use a for loop. If traversing a list of elements, or can formulate a suitable call to range, then choose a for loop.  This is definite iteration. -->
+
+    <!-- By contrast, if you are required to repeat some computation until some condition is met, you’ll need a while loop. This is indefinite iteration. -->
+
+    <input ID="pickOne" type="number">
+    <button>Number of times your digit appears</button>
+    </div>
+    <script>
+        const digitNum = document.querySelector('input')[i];
+        for (i = 0; i < digitNum.length; i++) {
+            if (digitNum < 100) {}
+        }
+        const output = document.createElement('p');
+
+        function numCount() {
+            document.getElementById('output').innerHTML = Math.floor(Math.random() * 100 + 1);
+        }
+
+        console.log(Math.pow(Math.random(), 100));
+
+        function gimme100(i) {
+            i = Math.floor(Math.random() * Math.floor(100));
+            while (i < 101) {
+                document.write(i);
+                i++;
+            }
+        }
+        (gimme100(100));
+    </script>
+</body>
+
+</html>
