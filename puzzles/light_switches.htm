@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Make 3 buttons for red, green, and blue. Have the buttons toggle 3 boolean variables called red,green, and blue.  Change the button in some way on click so you know whether they are currently true or false.  then set up if statements to change the background color of the document based on what is true and false.  For example when red=true; green=false; blue=false; the document should be red and when red=true;green=false;blue=true; the document should be violet.  As an added bonus if you made it using the && operator then re write it using nested if statements, and if you used nested if statements then re write it using the && operator.  Also if red=true;green=true;blue=true the document should be white and the opposite for black. -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div#room {
+            width: 100%;
+            height: 100vh;
+            /* background-color: #fff; */
+            background-image: linear-gradient( #917d5d, #000);
+        }
+        
+        body {
+            /* background-color: #000; */
+            height: 100vh;
+            width: 100%;
+            /* background-image: linear-gradient( #978261, #000); */
+            background-image: linear-gradient#e9e1c0, (#f8f4e3, #fff);
+        }
+        
+        div#panel {
+            position: absolute;
+        }
+        
+        button {
+            margin: 0.2em 2em;
+            font-size: 0.75em;
+            padding: .75vw;
+            background-color: #EAF9C2;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul li {
+            margin: 2vw 1vw;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setTimeout(wallSwitch, 500)">0 || 1</button>
+    <div id="room">
+        <div id="panel">
+            <ul>
+                <li id="red">
+                    <button onclick="red()">R</button>
+                </li>
+                <li id="green">
+                    <button onclick="red()">G</button>
+                </li>
+                <li id="blue">
+                    <button onclick="red()">B</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // A light switch for the room. 
+        function wallSwitch() {
+            var r = document.getElementById("room");
+            if (r.style.display === "none") {
+                r.style.display = 'block';
+            } else {
+                r.style.display = 'none';
+            }
+        }
+        // Have the buttons toggle 3 boolean variables called red,green, and blue.  Change the button in some way on click so you know whether they are currently true or false.  then set up if statements to change the background color of the document based on what is true and false.  For example when red=true; green=false; blue=false; the document should be red and when red=true;green=false;blue=true; the document should be violet. 
+        var red = document.getElementById("red");
+        var green = document.getElementById("green");
+        var blue = document.getElementById("blue");
+    </script>
+</body>
+
+<html>
