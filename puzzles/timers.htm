@@ -11,29 +11,57 @@
 <head>
     <title>Animation with Styles</title>
 </head>
+
+<body style="padding: 3rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></body>
 <h3>These scripts display changes in the timer.</h3>
 <p>This one's one interval per 1000 milliseconds</p>
 <div id="msecond">one interval per 1000 milliseconds</div>
-<p>This one's 60 times/second</p>
-<div id="faster">one interval per 16 milliseconds</div>
+<p>This one's 60 times/second, or one interval per 16 milliseconds</p>
+<div id="faster"></div>
 
-<body style="padding: 3rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
 
-    <script>
-        x = 0;
-        window.setInterval(function() {
-            document.getElementById('msecond').innerHTML = x;
-            x++;
-        }, 1000);
-    </script>
+<input type="button" id="start" value="start">
+<div style="background-color: rgb(0,0,0);">
+    <div id="shakeIt" style="background-color:rgb(255, 0, 0) width:30px;height:40px;">0</div>
+</div>
+<script>
+    // shakeIt = document.getElementById('shakeIt');
+    // document.getElementById('start').addEventListener('click', function() {
+    //     window.setinterval(function() {
+    //         shakeIt.style.height = height + 'px';
+    //         height++;
+    //         if (height > 40) {
+    //             height = 300;
+    //         }
+    //     }, 16);
+    // });
+    shakeIt.style.backgroundColor = 'rgb(0, 0, 0)';
 
-    <script>
-        y = 0;
-        window.setInterval(function() {
-            document.getElementById('faster').innerHTML = y;
-            y++;
-        }, 16);
-    </script>
+    function colorChange() {
+        document.getElementById('shakeIt').innerHTML;
+        window.requestAnimationFrame(colorChange);
+    }
+
+    // This is going to incorporate a loop that cycles through rgb values 
+    window.requestAnimationFrame(colorChange);
+</script>
+<script>
+    x = 0;
+    window.setInterval(function() {
+        document.getElementById('msecond').innerHTML = x;
+        x++;
+    }, 1000);
+</script>
+
+<script>
+    y = 0;
+    window.setInterval(function() {
+        document.getElementById('faster').innerHTML = y;
+        y++;
+    }, 16);
+</script>
+
+
 </body>
 
 </html>
