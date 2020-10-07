@@ -21,10 +21,33 @@
 
 <h3>Changing the css with javascript</h3>
 <h4>A progress bar</h4>
-<input type="button" id="start" value="START" style="height:20px;color:#fff;background-color:green;top:5px;left:20px;margin:5px;position: relative;"></button>
+<div id="progLine" style="width: 100%; background-color: #ccc;">
+    <div id="progressBar" style="width:1%; height: 40px; background-color: orange;"></div>
+</div>
+<input type="button" onclick="move()" id="start" value="START" style="height:20px;color:#fff;background-color:green;top:5px;left:20px;margin:5px;position: relative;"></button>
 
-<input type="button" id="stop" value="STOP" style="height:20px;color:#fff;background-color:red;top:5px;left:20px;margin:5px;position: relative;"></button>
+<input type="button" onclick="halt()" id="stop" value="STOP" style="height:20px;color:#fff;background-color:red;top:5px;left:20px;margin:5px;position: relative;"></button>
 <script>
+    var i = 0;
+
+    function move() {
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("progressBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                }
+            }
+        }
+    }
 </script>
 
 <script>
