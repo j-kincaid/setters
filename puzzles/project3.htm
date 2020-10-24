@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <!-- Create a grid of white squares, any dimensions.  When you click on a single square it will turn red, when you click on it again it will turn green, then blue, then red, cycling through the colors.
+
+    Start recording these actions as soon as the page loads, and make a replay and reset button for the actions.  The reset button also resets the recording time.  Since this is very abstract, you can make any program using performance.now() and event listeners. -->
+    <script>
+        document.body.onload = addSquare;
+
+        function addSquare() {
+            const newDiv = document.createElement("div");
+            newDiv.style = "height:10px;Width:10px;border:2px;#000;"
+        }
+    </script>
+</body>
+
+</html>
