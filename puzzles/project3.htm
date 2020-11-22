@@ -11,10 +11,12 @@
         /* Append an element to the body */
         element = document.createElement('div');
         document.body.appendChild(element);
-
+        colors = ['#f00', '#0f0', '#00f']
         element.innerHTML = '0'
         element.addEventListener('click', function() {
+            element.style.backgroundColor = colors[parseInt(element.innerHTML) % colors.length];
             element.innerHTML = parseInt(element.innerHTML) + 1
+
         })
     </script>
 </body>
