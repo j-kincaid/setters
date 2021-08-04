@@ -52,7 +52,8 @@ html, body{
  h1.name a {
     color: #fff;
     text-decoration: none;
-
+   display: block;
+   padding: .5em;
  }
  /* HTML Nav Styles */
  /* HTML Nav Styles */
@@ -94,7 +95,7 @@ html, body{
  }
  
  nav a {
-    background:#75F;
+    background:rgb(38, 5, 187);
     color:#FFF;
     min-width:190px;
     transition: background 0.5s, color 0.5s, transform 0.5s;
