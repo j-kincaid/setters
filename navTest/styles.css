@@ -1,3 +1,12 @@
+/* color palette
+PAGE BACKGROUND lightest gray = background-color: rgb(242, 245, 239);
+PARAGRAPH TEXT = color: rgb(68, 68, 66);
+HEADLINE slate greenish gray =  color: rgb(119, 128, 108);
+HIGHLIGHT/hover Pale highlight citrus yellow = color: rgb(186, 245, 109);
+BACKGROUND, YEAR Darkest green =  background-color: rgb(13, 26, 0);
+DARK GREEN TEXT = color: rgb(26, 50, 1);
+*/
+
 html, body{
     padding:0px;
     margin:0px;
